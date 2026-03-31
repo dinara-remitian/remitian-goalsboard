@@ -1,0 +1,175 @@
+@keyframes splF1 {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0) rotate(-1deg); }
+  50% { transform: translate(-50%, -50%) translateY(-16px) rotate(1deg); }
+}
+@keyframes splF2 {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0) rotate(1deg); }
+  50% { transform: translate(-50%, -50%) translateY(-12px) rotate(-1deg); }
+}
+@keyframes splF3 {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-14px); }
+}
+@keyframes splEmb {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  30% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(-140px) scale(0); }
+}
+@keyframes splPls {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+@keyframes splFlk {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  25% { opacity: 0.7; transform: scaleY(1.1); }
+  75% { opacity: 0.3; transform: scaleY(0.9); }
+}
+@keyframes splShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes splGlow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.2; }
+}
+
+.splash-container {
+  height: 100vh;
+  background: linear-gradient(180deg, #0f0a1a 0%, #1a0f2e 35%, #0d0818 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.spl-e {
+  position: absolute;
+  border-radius: 50%;
+  animation: splEmb 3.5s ease-out infinite;
+}
+
+.spl-shimmer {
+  background: linear-gradient(90deg, #fff 0%, #fff 38%, #ff8c42 50%, #fff 62%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: splShimmer 4s linear infinite;
+}
+
+.splash-torch {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 140, 66, 0.08) 0%, transparent 70%);
+  animation: splFlk ease-in-out infinite;
+}
+.splash-torch--purple {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.05) 0%, transparent 70%);
+}
+.splash-torch--teal {
+  background: radial-gradient(circle, rgba(0, 220, 180, 0.05) 0%, transparent 70%);
+}
+
+.splash-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.splash-brand {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.splash-brand-text {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: #ff8c42;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+.splash-lightning {
+  font-size: 34px;
+  margin-top: 6px;
+  filter: drop-shadow(0 0 18px rgba(255, 140, 66, 0.5));
+}
+
+.splash-logo-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.splash-logo-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 140, 66, 0.06) 0%, transparent 60%);
+  animation: splGlow 3s ease-in-out infinite;
+}
+.splash-logo-img {
+  width: 322px;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.splash-title-overlay {
+  position: absolute;
+  text-align: center;
+  pointer-events: none;
+}
+.splash-title {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0 0 6px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+.splash-subtitle {
+  font-size: 11px;
+  color: #8b7faa;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.splash-cta {
+  animation: splPls 2.5s ease-in-out infinite;
+  border: 1.5px solid #ff8c42;
+  border-radius: 24px;
+  padding: 12px 36px;
+  margin-top: 0;
+}
+.splash-cta-text {
+  color: #ff8c42;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.splash-character {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+}
+.splash-character-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.splash-character-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
