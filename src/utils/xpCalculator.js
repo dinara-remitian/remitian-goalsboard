@@ -25,3 +25,12 @@ export function getCurrentWeekRange() {
     d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   return `${fmt(mon)} – ${fmt(fri)}, ${fri.getFullYear()}`;
 }
+
+// Returns a short week label like "Mar 30" for the current Monday
+export function getWeekLabel() {
+  const now = new Date();
+  const day = now.getDay();
+  const mon = new Date(now);
+  mon.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
+  return mon.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}

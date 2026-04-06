@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { STATUS, TC } from '../data/statusDefs';
 import { HEROES } from '../data/config';
 import { computeCompletionPct, weekXP } from '../utils/xpCalculator';
@@ -6,6 +7,7 @@ import Bar from './Bar';
 import './HeroCard.css';
 
 export default function HeroCard({ m, expanded, onClick, onEdit }) {
+  const [showNotes, setShowNotes] = useState(false);
   const tc = TC[m.team];
   const xp = weekXP(m);
   const pct = computeCompletionPct(m.statuses, m.goals);
@@ -95,6 +97,12 @@ export default function HeroCard({ m, expanded, onClick, onEdit }) {
           >
             + Add goal
           </button>
+          {m.notes && (
+            <div className="mt-2">
+              <button onClick={e => { e.stopPropagation(); setShowNotes(!showNotes); }} className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1">📝 Friday Notes {showNotes ? "▲" : "▼"}</button>
+              {showNotes && <p className="text-xs text-slate-500 mt-1 px-2 py-1.5 bg-slate-50 rounded-lg border border-slate-200 whitespace-pre-line">{m.notes}</p>}
+            </div>
+          )}
           {prevS && (
             <div className={`mt-3 rounded-lg border px-3 py-2 ${prevS.bg} ${prevS.border}`}>
               <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Previous Week</p>

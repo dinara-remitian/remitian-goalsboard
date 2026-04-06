@@ -1,5 +1,5 @@
 import { INIT } from '../data/team';
-import { PM, computePM } from '../data/history';
+import { HISTORY, computePM } from '../data/history';
 import { DATA_VERSION } from '../data/config';
 import storageService from './storageService';
 
@@ -26,7 +26,7 @@ const dataService = {
 
   async getHistory() {
     // FUTURE: return await fetch('/api/goals/history').then(r => r.json());
-    return PM;
+    return HISTORY;
   },
 
   computePM,

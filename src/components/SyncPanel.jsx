@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TEAMS } from '../data/statusDefs';
 import './SyncPanel.css';
 
-export function ConfigPanel({ channelId, setChannelId, onClose, onSync, onPasteSync, onReset }) {
+export function ConfigPanel({ channelId, setChannelId, onClose, onSync, onPasteSync, onReset, onCloseWeek }) {
   const [pasteText, setPasteText] = useState("");
   const [showPaste, setShowPaste] = useState(false);
 
@@ -60,6 +60,15 @@ export function ConfigPanel({ channelId, setChannelId, onClose, onSync, onPasteS
         />
       </div>
       <p className="text-xs text-slate-400 mb-3">#goalboard-sync (C0AL1NFB6MA)</p>
+
+      {onCloseWeek && (
+        <div className="flex gap-2 mb-3">
+          <button onClick={onCloseWeek} className="text-xs px-3 py-2 rounded-lg bg-amber-50 border border-amber-300 text-amber-700 hover:bg-amber-100 font-semibold">
+            📦 Close Week
+          </button>
+          <span className="text-xs text-slate-400 self-center">Save current week to history, start fresh</span>
+        </div>
+      )}
 
       <div className="flex gap-2">
         <button onClick={onReset} className="text-xs px-3 py-2 rounded-lg bg-red-50 border border-red-200 text-red-600 hover:bg-red-100 font-semibold">

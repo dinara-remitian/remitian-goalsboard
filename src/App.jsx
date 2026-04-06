@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { INIT } from './data/team';
-import { DATA_VERSION } from './data/config';
+import { DATA_VERSION, MONTH_WEEKS } from './data/config';
 import { STATUS, TC, TEAMS } from './data/statusDefs';
 import { rankFromPct } from './data/ranks';
-import { computeCompletionPct, getCurrentWeekRange } from './utils/xpCalculator';
+import { computeCompletionPct, getCurrentWeekRange, getWeekLabel } from './utils/xpCalculator';
 import { matchMember } from './utils/statusHelpers';
 import { parseGoalsBotMessages } from './utils/syncParser';
 import { computePM } from './data/history';
@@ -44,60 +44,12 @@ export default function App() {
   const [addGoals, setAddGoals] = useState(["", "", ""]);
 
   // Load saved data on mount, then auto-sync from sync.json
+  // Load saved data on mount (no auto-sync — sync is manual via the Sync button)
   useEffect(() => {
     (async () => {
       const saved = await dataService.loadSavedTeamData();
       if (saved) setMembers(saved);
       setReady(true);
-
-      // Auto-sync: fetch latest sync.json silently on load
-      try {
-        const base = import.meta.env.BASE_URL;
-        const res = await fetch(`${base}sync.json?t=${Date.now()}`);
-        if (res.ok) {
-          const data = await res.json();
-          if (data.raw) {
-            const parsed = parseGoalsBotMessages(data.raw);
-            const { goals: goalsData, statuses: statusData, overall: overallData } = parsed;
-            if (Object.keys(goalsData).length > 0 || Object.keys(statusData).length > 0 || Object.keys(overallData).length > 0) {
-              setMembers((prev) =>
-                prev.map((m) => {
-                  let updated = { ...m };
-                  const gMatch = Object.values(goalsData).find((g) => matchMember(g.name, [m]) !== null);
-                  if (gMatch) {
-                    const ng = [...gMatch.goals];
-                    while (ng.length < m.goals.length) ng.push("");
-                    const ns = ng.map((g, i) => {
-                      if (!g) return "pending";
-                      if (i < m.goals.length && m.goals[i] === g && m.statuses[i] !== "pending") return m.statuses[i];
-                      return "not_started";
-                    });
-                    updated = { ...updated, goals: ng, statuses: ns };
-                  }
-                  const sMatch = Object.values(statusData).find((s) => matchMember(s.name, [m]) !== null);
-                  if (sMatch) {
-                    const ns = [...updated.statuses];
-                    for (let i = 0; i < sMatch.statuses.length && i < ns.length; i++) {
-                      if (updated.goals[i]) ns[i] = sMatch.statuses[i];
-                    }
-                    updated = { ...updated, statuses: ns };
-                  } else {
-                    const oMatch = Object.values(overallData).find((o) => matchMember(o.name, [m]) !== null);
-                    if (oMatch) {
-                      const ns = updated.goals.map((g) => (g ? oMatch.status : "pending"));
-                      updated = { ...updated, statuses: ns };
-                    }
-                  }
-                  return updated;
-                })
-              );
-              setLastSync(data.updated ? new Date(data.updated).toLocaleTimeString() : "auto");
-            }
-          }
-        }
-      } catch {
-        // Silent fail — sync.json may not exist yet
-      }
     })();
   }, []);
 
@@ -112,11 +64,48 @@ export default function App() {
   }, [members, ready]);
 
   async function resetStorage() {
-    if (!confirm("Reset GoalsBoard to initial March 9th data? This clears all synced changes.")) return;
+    if (!confirm("Reset GoalsBoard to initial data? This clears all synced changes.")) return;
     await dataService.resetData();
     setMembers(INIT);
     setSavedAt(null);
     setStatusMsg("🗑️ Board reset to initial data.");
+  }
+
+  async function closeWeek() {
+    const weekLbl = getWeekLabel();
+    if (!confirm(`Close week "${weekLbl}" and save to history? This will reset all statuses to pending for the new week.`)) return;
+    // Load existing saved history
+    const raw = await storageService.get('remitian-week-history');
+    const hist = raw?.value ? JSON.parse(raw.value) : {};
+    // Snapshot each member's current goals/statuses/notes into history
+    const snapshot = members.map((m) => ({
+      name: m.name,
+      goals: [...m.goals],
+      statuses: [...m.statuses],
+      notes: m.notes || "",
+      eow: m.statuses.every((s) => s === "pending") ? "pending"
+        : m.statuses.every((s) => s === "complete") ? "complete"
+        : m.statuses.some((s) => s === "behind") ? "behind"
+        : m.statuses.some((s) => s === "complete") ? "almost_complete"
+        : m.statuses.some((s) => s === "in_progress") ? "in_progress"
+        : "not_started",
+    }));
+    hist[weekLbl] = snapshot;
+    await storageService.set('remitian-week-history', JSON.stringify(hist));
+    // Reset statuses to pending, update prevStatus, clear notes
+    setMembers((prev) =>
+      prev.map((m) => {
+        const snap = snapshot.find((s) => s.name === m.name);
+        return {
+          ...m,
+          prevStatus: snap?.eow || m.prevStatus,
+          statuses: m.goals.map(() => "pending"),
+          notes: "",
+        };
+      })
+    );
+    setStatusMsg(`✅ Week "${weekLbl}" saved to history. Ready for new week!`);
+    setTimeout(() => setStatusMsg(""), 5000);
   }
 
   const wk = getCurrentWeekRange();
@@ -133,8 +122,8 @@ export default function App() {
   );
   const tPow = tGoals ? Math.round((tEarned / (tGoals * 100)) * 100) : 0;
   const mvp = [...members].sort((a, b) => {
-    const pa = computePM(a.name, ["Mar 2026"]);
-    const pb = computePM(b.name, ["Mar 2026"]);
+    const pa = computePM(a.name, MONTH_WEEKS["Mar 2026"] || []);
+    const pb = computePM(b.name, MONTH_WEEKS["Mar 2026"] || []);
     return pb.pct - pa.pct;
   })[0];
 
@@ -169,6 +158,7 @@ export default function App() {
         id: nid, hero: nid, streak: 0, name: addName.trim(), team: addTeam,
         goals: addGoals.map((g) => g.trim()),
         statuses: addGoals.map((g) => (g.trim() ? "not_started" : "pending")),
+        notes: "",
       },
     ]);
     setShowAdd(false);
@@ -183,7 +173,7 @@ export default function App() {
     };
     log(`Raw text: ${rawText.length} chars`);
     const parsed = parseGoalsBotMessages(rawText);
-    const { goals: goalsData, statuses: statusData, overall: overallData } = parsed;
+    const { goals: goalsData, statuses: statusData, overall: overallData, notes: notesData } = parsed;
     const gc = Object.keys(goalsData).length;
     const sc = Object.keys(statusData).length;
     const oc = Object.keys(overallData).length;
@@ -236,6 +226,12 @@ export default function App() {
             updateCount++;
             log(`🔄 "${oMatch.name}" → ${m.name} = ${oMatch.status} (legacy)`, "success");
           }
+        }
+        const nMatch = Object.values(notesData || {}).find((n) => matchMember(n.name, [m]) !== null);
+        if (nMatch) {
+          updated = { ...updated, notes: nMatch.notes };
+          matched = true;
+          log(`📝 "${nMatch.name}" → ${m.name}: notes applied`, "success");
         }
         return matched ? updated : m;
       })
@@ -345,6 +341,7 @@ export default function App() {
             onSync={syncFromSlack}
             onPasteSync={(text) => { setLogs([]); applySync(text); }}
             onReset={resetStorage}
+            onCloseWeek={closeWeek}
           />
         )}
 
