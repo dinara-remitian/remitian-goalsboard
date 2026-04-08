@@ -1,11 +1,12 @@
 export const DATA_VERSION = "apr6-v3";
 
-export const MONTHS = ["Jan 2026", "Feb 2026", "Mar 2026"];
+export const MONTHS = ["Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026"];
 
 export const MONTH_WEEKS = {
   "Jan 2026": ["Jan 5","Jan 12","Jan 19","Jan 26"],
   "Feb 2026": ["Feb 2","Feb 9","Feb 17","Feb 23"],
-  "Mar 2026": ["Mar 2","Mar 9","Mar 16","Mar 23","Mar 30"]
+  "Mar 2026": ["Mar 2","Mar 9","Mar 16","Mar 23","Mar 30"],
+  "Apr 2026": ["Apr 6","Apr 13","Apr 20","Apr 27"]
 };
 
 // Slack user ID → display name mapping for sync
