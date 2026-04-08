@@ -32,7 +32,7 @@ export const SLACK_MAP = {
   "U096L31N19U": "Nnamdi Nwafor",
   "U0A6TG2V684": "Noah Gould",
   "U062XMJDDPY": "PO Charlebois",
-  "U0AQMG6RSMN": "Sam",
+  "U0AQMG6RSMN": "Sam Malhotra",
   "U0AG6M8S61G": "Scott Rockefeller",
   "U063H0EJQHF": "Solon Angel",
   "U090L5KDC6M": "Stefan Celeski",
