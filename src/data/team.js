@@ -23,4 +23,7 @@ export const INIT = [
   { id: 22, name: "Stefan Celeski", team: "Marketing", hero: 21, streak: 3, prevStatus: "in_progress", goals: ["Finalize BDO Alliance membership (integrated campaign plan)", "Post first blog post on new website", "Update Brand assets (Notion, Hubspot)", "Delegate outbound comms to Noah"], statuses: ["pending", "pending", "pending", "pending"], notes: "" },
   { id: 23, name: "Mo Abdirahman", team: "Sales", hero: 23, streak: 0, prevStatus: "not_started", goals: [], statuses: [], notes: "" },
   { id: 24, name: "Larry Garfinkle", team: "Operations", hero: 22, streak: 99, prevStatus: "complete", goals: ["Staying Awesome"], statuses: ["complete"], notes: "" },
+  { id: 25, name: "Sam", team: "Operations", hero: 24, streak: 0, prevStatus: "pending", goals: [], statuses: [], notes: "" },
+  { id: 26, name: "Ekene Ndubueze", team: "Operations", hero: 0, streak: 0, prevStatus: "pending", goals: [], statuses: [], notes: "" },
+  { id: 27, name: "Van Le", team: "Operations", hero: 1, streak: 0, prevStatus: "pending", goals: [], statuses: [], notes: "" },
 ];

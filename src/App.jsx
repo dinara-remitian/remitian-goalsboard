@@ -267,9 +267,9 @@ export default function App() {
     setStep("Fetching sync data...");
     setStatusMsg("🔍 Checking for sync updates...");
     try {
-      // Try fetching sync.json (updated by n8n or Claude Code)
-      const base = import.meta.env.BASE_URL;
-      const res = await fetch(`${base}sync.json?t=${Date.now()}`);
+      // Fetch sync.json directly from GitHub raw (instant, no deploy wait)
+      const syncUrl = `https://raw.githubusercontent.com/dinara-remitian/remitian-goalsboard/main/public/sync.json?t=${Date.now()}`;
+      const res = await fetch(syncUrl);
       if (res.ok) {
         const data = await res.json();
         if (data.raw) {
