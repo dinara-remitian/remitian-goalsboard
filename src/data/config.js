@@ -10,25 +10,32 @@ export const MONTH_WEEKS = {
 
 // Slack user ID → display name mapping for sync
 export const SLACK_MAP = {
-  "U09NC4FPPDH": "Dinara Abdualiyeva",
+  "U07PSTYE4F5": "Aaron Gould",
   "U064DQ0JNMS": "Adam Cooper",
   "U0883DBA5UY": "André Andreotti",
   "U0AJGL6PKS4": "Brittany Villani",
   "U06PX54A9M4": "Celina Mziray",
   "U0A68EZTUT1": "Claudio Torres",
+  "U09NC4FPPDH": "Dinara Abdualiyeva",
+  "U0AQ658LD2M": "Ekene Ndubueze",
   "U09P6GJPPNE": "Felipe Gallez",
   "U08QFPXLSDB": "Georgia Turner",
   "U08BQ16LQV9": "Inna Fomina",
-  "U09E4TR6363": "Marcos Jacobs",
   "U07RXUYN1NY": "Jamilson Santos",
   "U076WM39NJ3": "Leighanne Murray",
   "U06PJC6ENAC": "Lucas Amorim",
+  "U09E4TR6363": "Marcos Jacobs",
+  "U0AMS48FYE7": "Mo Abdirahman",
   "U09NJNZF1GV": "Mykhailo Lishchuk",
   "U085RDZPQ8L": "Nick Lawrence",
+  "U096L31N19U": "Nnamdi Nwafor",
   "U0A6TG2V684": "Noah Gould",
   "U062XMJDDPY": "PO Charlebois",
+  "U0AQMG6RSMN": "Sam",
   "U0AG6M8S61G": "Scott Rockefeller",
   "U063H0EJQHF": "Solon Angel",
+  "U090L5KDC6M": "Stefan Celeski",
+  "U0APC6505CP": "Van Le",
 };
 
 export const XP_WEIGHT = { complete: 1.0, almost_complete: 0.75, in_progress: 0.5, behind: 0.25, not_started: 0, galavanting: 0, pending: 0 };
