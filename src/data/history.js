@@ -14,6 +14,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Work with Felipe to finish NY E-signature design", "Advisory Board Feedback Report", "compliance support"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Customer Advisory Board review scheduled", "Compliance Agents", "Roadmap Q2 planning"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Close API deal", "Roadmap review", "Compliance app in testing"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Roadmap review Q2", "Compliance app rollout", "API sales pipeline"], eow: "pending", notes: "" },
   ],
   "Adam Cooper": [
     { week: "Jan 5", goals: ["3.1.1 US release", "Public API cloud support", "Engineering surge / contractors initiative", "roadmap review"], eow: "complete", notes: "" },
@@ -28,6 +29,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["compliance", "determine 3.2.1 code freeze and release date", "bulk upload script enhancements", "hot fixes for US and CA", "created stagingx"], eow: "complete", notes: "" },
     { week: "Mar 16", goals: ["compliance", "Aprio bulk upload + invite only enhancement", "create preview environment", "ACH"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["2.1 US April 15th release"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Monitor CA 3.3.0 compliance release", "US 3.2.1 release", "SOC 2 Observation window final audit"], eow: "pending", notes: "" },
   ],
   "André Andreotti": [
     { week: "Jan 5", goals: ["Finalize AML Questionnaire for Taxpayer"], eow: "almost_complete", notes: "" },
@@ -42,12 +44,14 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Refactor Identity Verification to use on KYB", "Watcher duties"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Finalize automatic blocking of payments from non-compliant entities", "Watcher duties"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["Watcher", "Support 3.3.0 release", "KYB block schedule creation"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Watcher (compliance conciliation)", "KYB block on schedule creation/approval"], eow: "pending", notes: "" },
   ],
   "Brittany Villani": [
     { week: "Mar 2", goals: ["Welcome Brittany!"], eow: "in_progress", notes: "" },
     { week: "Mar 9", goals: ["Work on tasks for Solon"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Continue working on times for external and internal meetings", "Continue to learn Claude", "Copy of storage key to check on Swag", "Purchase and go over upcoming events/conferences"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["Send invitations for Harbour Council", "Innovations Alliance Website", "Finish budgeting for events"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Finish Mega Sponsorship and Pay", "Reach out to Kenneth and Koffman Rosan for HBC spots"], eow: "pending", notes: "" },
   ],
   "Celina Mziray": [
     { week: "Jan 5", goals: ["Taking over payroll with peregrine + board meeting planning"], eow: "in_progress", notes: "" },
@@ -62,6 +66,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Information Access Policy Update", "HR File Organization"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["HR File Organization continues along with the Information Access Policy update"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["Information Access Policy updates", "Linear items cleanup", "Review hiring workflow", "QA candidate screening"], eow: "pending", notes: "" },
+    { week: "Mar 30", goals: ["HR Files & Rippling - Keep an eye out for any signature requests from Rippling"], eow: "pending", notes: "" },
   ],
   "Claudio Torres": [
     { week: "Jan 5", goals: ["Onboarding process"], eow: "almost_complete", notes: "" },
@@ -76,6 +81,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Deliver 3 payment automations", "Follow up on Add Optional External ID to Firm Client"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Arizona Business Tax Identity Verification, Tax Payment, and Tax Payment Lookup", "Contribute to 2 more state automations"], eow: "behind", notes: "" },
     { week: "Mar 23", goals: ["Total focus on automation", "Maryland Business Payment Automation"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Implement Automation flow for California", "TBD State to be automated"], eow: "pending", notes: "" },
   ],
   "Dinara Abdualiyeva": [
     { week: "Jan 5", goals: ["Follow up on leads and demos"], eow: "complete", notes: "" },
@@ -90,6 +96,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Top 100 campaign", "Relay partnership next steps"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Lettuce next Steps", "vibe code"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["OFX partnership Discovery", "Freshbooks webinar alignment", "US/CA Coverage in GitHub", "Lettuce meeting set up"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Lettuce onboarding", "Marketing campaign with Danvy on Anchin", "Complete ROI calculator for the website", "Ensure everyone is using new goals board"], eow: "almost_complete", notes: "Waiting on Felipe to share the new fonts to update in the calculator. Everything else is complete." },
   ],
   "Felipe Gallez": [
     { week: "Feb 9", goals: ["KYC+KYB UI/UX", "API Developer Portal", "Back Office platform"], eow: "complete", notes: "" },
@@ -99,6 +106,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Connect Ghost to the site", "investor section"], eow: "complete", notes: "" },
     { week: "Mar 16", goals: ["Finalize website based on Stefan feedback"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Finalise website", "KYB design UX/UI flow", "Blog posts on new webpage"], eow: "pending", notes: "" },
+    { week: "Mar 30", goals: ["KYB flow", "Website live", "Study AI chat with Hubspot on our page", "Investor deck charts"], eow: "pending", notes: "" },
   ],
   "Georgia Turner": [
     { week: "Jan 5", goals: ["Range.com", "Withum meeting/billing", "Update product library", "Top 100 planning with Dinara"], eow: "behind", notes: "" },
@@ -113,6 +121,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["top 100 HubSpot upload", "determine next steps with Amel", "Aiwyn BDR plan"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Aiwyn plan", "Crowe procurement next steps", "pricing automation"], eow: "behind", notes: "" },
     { week: "Mar 23", goals: ["Pipeline cleanliness & expansion visibility", "API pricing", "Aiwyn customer tagging/talk track"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Aiwyn/BDO event", "Crowe", "Q3 pipeline", "Pilot/Adoption alignment", "API implementation alignment"], eow: "pending", notes: "" },
   ],
   "Inna Fomina": [
     { week: "Jan 5", goals: ["Transition(pending banking)", "WSFS", "WellsFargo test account"], eow: "almost_complete", notes: "" },
@@ -127,6 +136,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["investor update draft", "Corporate Florida registration"], eow: "behind", notes: "" },
     { week: "Mar 16", goals: ["Finance investigation for expense management"], eow: "in_progress", notes: "" },
     { week: "Mar 23", goals: ["US Stripe register", "Legal/compliance folder org", "Equity grant SO process"], eow: "pending", notes: "" },
+    { week: "Mar 30", goals: ["Carta paperwork", "Dataroom investors request 1 of 2"], eow: "pending", notes: "" },
   ],
   "Jamilson Santos": [
     { week: "Jan 5", goals: ["watcher routine", "add manual support for Iowa and Minnesota"], eow: "complete", notes: "" },
@@ -141,6 +151,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Implement manual support for business payments on NYC", "Start testing US payment fee collection flow"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Add manual support for business payments in Montana", "Add manual support for individual payments in Montana", "Add manual support for business payments in NYC"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Implement NY/NYC e-Signature flow"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Update and test the US Fee Collection flow (Wells Fargo Integration)"], eow: "pending", notes: "" },
   ],
   "Leighanne Murray": [
     { week: "Jan 5", goals: ["US communications, prep JAN webinars, follow-up on beta feature users + 4 onboardings"], eow: "complete", notes: "" },
@@ -155,6 +166,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Compliance support outreach", "CS Pipeline Automations", "Remitian Hub Build", "RISA improvements"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Compliance support outreach for end of March/April", "CS/Compliance App Script", "Planning for 3.3 communications & Webinar", "Sona AI improvements"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["3.3 Release Communication", "Compliance Outreach for April", "Account Closure/Cancellation Flow", "Onboarding Follow-ups"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Remediate outstanding compliance", "Prepare communications for 3.2.1 (US)", "Create an Account Closure/Cancellation Flow", "Onboarding Follow-ups"], eow: "pending", notes: "" },
   ],
   "Lucas Amorim": [
     { week: "Jan 5", goals: ["Wrap up external ID support", "Implement firm management endpoints", "Review Public API project scope"], eow: "almost_complete", notes: "" },
@@ -169,6 +181,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Payment automation for 2+ tax endpoints"], eow: "behind", notes: "" },
     { week: "Mar 16", goals: ["Automation for Delaware and Alabama"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["Automation for 4 tax endpoints"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Support the team with next release preparation", "Implement the initial version of the Developer Portal", "Adjust / merge contractor PRs (15)"], eow: "behind", notes: "Still working on the developer portal, planning to have a first version ready by end of this week." },
   ],
   "Marcos Jacobs": [
     { week: "Jan 5", goals: ["Claudio Onboarding", "Complete support for Indiana, North Dakota and West Virginia"], eow: "complete", notes: "" },
@@ -183,6 +196,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Payment/connection automation for US states", "Backoffice view to manage US state connections"], eow: "behind", notes: "" },
     { week: "Mar 16", goals: ["Payment/connection automation for US states", "Fix Wisconsin individual automation", "Complete Wisconsin business automation", "Automation for DC"], eow: "behind", notes: "" },
     { week: "Mar 23", goals: ["Finalizing automations for 3.2.1 release"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Wrap up all pending work on the Backoffice tool", "Finalize one more automation"], eow: "galavanting", notes: "OOO" },
   ],
   "Mykhailo Lishchuk": [
     { week: "Jan 5", goals: ["Onboard new hires", "Drafts agent", "Maps scraping tool updates"], eow: "almost_complete", notes: "" },
@@ -197,6 +211,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Mail agent improvements", "Research Claude MCP for n8n", "Continue content generation"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["HeyReach reply bot", "Finalize KYC agent testing", "Mail agent research and start testing"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["Be awesome", "Blog bot process", "HeyReach bot process", "Onboard MO", "Move n8n to apps scripts"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Onboard Sam", "Prepare laptops", "Improve Heyreach and content bots", "SSL verification"], eow: "in_progress", notes: "" },
   ],
   "Nick Lawrence": [
     { week: "Jan 5", goals: ["Plan together with key team members on Aprio YS", "Review Customer Reporting deliverables"], eow: "complete", notes: "" },
@@ -211,6 +226,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Review US Payments flow and develop SOP", "Develop state payment strategy", "Creation of client friendly compliance material"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Develop client facing video for US firms", "Begin design structure for eMerge presentation", "RPAA Annual Report"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["RPAA Annual report final draft"], eow: "in_progress", notes: "" },
+    { week: "Mar 30", goals: ["Submit RPAA (call Bank of Canada)", "Finalize RI, NE, NH Third Party reg", "Create content for client adoption"], eow: "in_progress", notes: "" },
   ],
   "Nnamdi Nwafor": [
     { week: "Jan 5", goals: ["Finalise the US 3.1.1 QA", "Submit the plan for the Testers Network"], eow: "complete", notes: "" },
@@ -225,6 +241,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Support the next release", "QA Remitian Bridge", "Additional 12 e2e workflows"], eow: "complete", notes: "" },
     { week: "Mar 16", goals: ["supporting qa for releases", "end-to-end tests", "qa remitian bridge"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["QA 3.3.0 CA release", "Support 3.2.1 release", "QA new website", "E2E automation framework review"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Support the 3.2.1 Release - QA the linears", "Verify all the 3.2.1 linears", "Refactoring of the E2E automation suite", "Final QA of the new website"], eow: "complete", notes: "" },
   ],
   "Noah Gould": [
     { week: "Jan 5", goals: ["Full week of dials", "book 1 demo", "have my first demo take place"], eow: "complete", notes: "" },
@@ -239,6 +256,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["3 demos booked", "New BDR onboarding", "Heading to Dublin"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["back wednesday"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Get Mo Onboarded", "Book 3 demos", "Q1 look back"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Book my first banking demo", "Help Mo book his first demo", "Shortlist a candidate to be interviewed"], eow: "pending", notes: "" },
   ],
   "PO Charlebois": [
     { week: "Jan 5", goals: ["Remitian Bridge", "Line-up Sam's work"], eow: "behind", notes: "" },
@@ -253,6 +271,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Finalize 3.2.1 with embedded payment operations", "Push Wells Fargo for ACH Debit", "Split 2025 P&L"], eow: "complete", notes: "" },
     { week: "Mar 16", goals: ["ACH Debit with Wells Fargo", "Setup Felipe for rapid prototyping", "Present framework for hosted apps", "Remitian Bridge at Aprio"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Test Remitian Bridge in SafeSend", "Finish AI Financial/Key Metrics Model", "Support 3.2.1 code freeze"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Validate all paths of US and Canada payment operations", "Provision AWS Operations environment", "Support Aprio in installing the Remitian Bridge", "Welcome Sam and prepare the journey automation work"], eow: "pending", notes: "" },
   ],
   "Scott Rockefeller": [
     { week: "Feb 2", goals: ["Pipeline Review", "Get verbal yes from BLISS 1041", "Set meeting with EY", "Book two meetings"], eow: "almost_complete", notes: "" },
@@ -261,6 +280,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Enterprise: SCP Health - Get VP Tax to a Yes", "Bliss 1041: Move to close", "Outline for Webinar", "Work on Recorded Demo asset"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Set SCP Health with Treasury", "Marketing campaign to LinkedIn contacts", "Continue Top 100 list", "Set meeting with Dan Lansen", "Webinar", "Banking API webinar"], eow: "almost_complete", notes: "" },
     { week: "Mar 23", goals: ["SCP Health demo", "Marketing Campaign", "Aprio webinar", "Banking webinar"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Banking: Finalize Banking API campaign with Stefan", "Capital One: Get requirements document and push for NDA", "BLISS 1041: Finalize status of API with Rich", "SCP Health: Get introduced to Security resource", "Get Aprio to commit to webinar", "Pipeline: Continue to work", "Shopify"], eow: "almost_complete", notes: "1. Stefan and I connecting at 11 a.m. today.\n2. Capital One: Push for NDA.\n3. BLISS 1041: Silent and expected.\n4. SCP Health: Demo to CFO Joint Ventures.\n5. Aprio webinar (Open)\n6. Pipeline (WIP)\n7. Shopify - Larry and Solon to review." },
   ],
   "Solon Angel": [
     { week: "Jan 5", goals: ["Revenue & Growth Alignment", "Back Office Strengthening", "Build a clear sales plan to hit $100K/week"], eow: "complete", notes: "" },
@@ -275,6 +295,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["New deals, follow up former deals", "Engage new investors", "Truss, April Tax, Hubsync", "Re negotiate aiwyn"], eow: "in_progress", notes: "" },
     { week: "Mar 16", goals: ["Accountability week"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Redline back to April", "Package for Truss/Taxdome/gruntworks", "MBE key API", "Report and board meeting", "Finesse automations"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Outreach and content engine tuning with Mike", "API sales", "Dataroom prep with Inna", "Deck refining"], eow: "pending", notes: "" },
   ],
   "Stefan Celeski": [
     { week: "Jan 5", goals: ["Get outbound up and running for 2026", "Finalize Craig Weaver LinkedIn campaign", "plan wealth management outreach with Noah"], eow: "almost_complete", notes: "" },
@@ -289,9 +310,19 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Asset Roadmap (buyer journey)", "Define requirements for Marketing Agents"], eow: "almost_complete", notes: "" },
     { week: "Mar 16", goals: ["Get Scott set-up on HeyReach and enterprise campaign", "Initiate Regional Banks/Credit Union lead search"], eow: "galavanting", notes: "" },
     { week: "Mar 23", goals: ["HeyReach Enterprise campaign (400 healthcare leads)", "Regional Banks/Credit Union lead search (1,000 leads)"], eow: "almost_complete", notes: "" },
+    { week: "Mar 30", goals: ["Finalize BDO Alliance membership", "Post first blog post on new website", "Update Brand assets - Notion, Hubspot", "Delegate outbound comms to Noah"], eow: "almost_complete", notes: "1. In progress\n2. Blog post done but not published\n3. Done\n4. In progress - not a one week task" },
   ],
   "Mo Abdirahman": [
     { week: "Mar 30", goals: ["Welcome Mo!"], eow: "pending", notes: "" },
+  ],
+  "Sam Malhotra": [
+    { week: "Mar 30", goals: [], eow: "pending", notes: "Starting April 1st." },
+  ],
+  "Ekene Ndubueze": [
+    { week: "Mar 30", goals: [], eow: "pending", notes: "Starting April 1st." },
+  ],
+  "Van Le": [
+    { week: "Mar 30", goals: [], eow: "pending", notes: "Starting April 1st." },
   ],
   "Larry Garfinkle": [
     { week: "Jan 5", goals: ["Be awesome"], eow: "complete", notes: "" },
@@ -306,6 +337,7 @@ export const HISTORY = {
     { week: "Mar 9", goals: ["Staying Awesome"], eow: "complete", notes: "" },
     { week: "Mar 16", goals: ["Staying Awesome"], eow: "complete", notes: "" },
     { week: "Mar 23", goals: ["Staying Awesome"], eow: "complete", notes: "" },
+    { week: "Mar 30", goals: ["Staying Awesome"], eow: "complete", notes: "" },
   ],
 };
 
