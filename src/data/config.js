@@ -1,4 +1,4 @@
-export const DATA_VERSION = "apr10-v1";
+export const DATA_VERSION = "apr10-v2";
 
 export const MONTHS = ["Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026"];
 

@@ -6,6 +6,7 @@ export const INIT = [
   { id: 5, name: "Celina Mziray", team: "Operations", hero: 4, streak: 3, prevStatus: "pending", goals: ["HR folder cleanup continues - sign off on updated employee handbook"], statuses: ["pending"], notes: "" },
   { id: 6, name: "Claudio Torres", team: "Engineering", hero: 5, streak: 3, prevStatus: "complete", goals: ["Implement Automation flow for California", "TBD State to be automated"], statuses: ["pending", "pending"], notes: "" },
   { id: 7, name: "Dinara Abdualiyeva", team: "Sales", hero: 6, streak: 3, prevStatus: "complete", goals: ["Lettuce onboarding", "Marketing campaign with Danvy on Anchin", "Complete ROI calculator for the website", "Ensure everyone is using new goals board"], statuses: ["complete", "complete", "almost_complete", "not_started"], notes: "Waiting on Felipe to share new brand fonts" },
+  { id: 26, name: "Ekene Ndubueze", team: "Engineering", hero: 0, streak: 0, prevStatus: "pending", goals: ["Compliance take over", "Training", "30-60-90 days plan"], statuses: ["pending", "pending", "pending"], notes: "" },
   { id: 8, name: "Felipe Gallez", team: "Engineering", hero: 7, streak: 3, prevStatus: "pending", goals: ["KYB flow", "Website live", "Study AI chat with Hubspot on our page", "Investor deck charts"], statuses: ["pending", "pending", "pending", "pending"], notes: "" },
   { id: 9, name: "Georgia Turner", team: "Sales", hero: 8, streak: 3, prevStatus: "almost_complete", goals: ["Aiwyn/BDO event", "Crowe", "Q3 pipeline", "Pilot/Adoption alignment", "API implementation alignment"], statuses: ["pending", "pending", "pending", "pending", "pending"], notes: "" },
   { id: 10, name: "Inna Fomina", team: "Operations", hero: 9, streak: 2, prevStatus: "pending", goals: ["Carta paperwork", "Dataroom investor request 1 of 2"], statuses: ["pending", "pending"], notes: "" },
@@ -24,6 +25,5 @@ export const INIT = [
   { id: 23, name: "Mo Abdirahman", team: "Sales", hero: 23, streak: 0, prevStatus: "not_started", goals: [], statuses: [], notes: "" },
   { id: 24, name: "Larry Garfinkle", team: "Operations", hero: 22, streak: 99, prevStatus: "complete", goals: ["Staying Awesome"], statuses: ["complete"], notes: "" },
   { id: 25, name: "Sam Malhotra", team: "Operations", hero: 24, streak: 0, prevStatus: "pending", goals: ["New permission and automation", "30-90 days plan"], statuses: ["pending", "pending"], notes: "" },
-  { id: 26, name: "Ekene Ndubueze", team: "Engineering", hero: 0, streak: 0, prevStatus: "pending", goals: ["Compliance take over", "Training", "30-60-90 days plan"], statuses: ["pending", "pending", "pending"], notes: "" },
   { id: 27, name: "Van Le", team: "Engineering", hero: 1, streak: 0, prevStatus: "pending", goals: ["Training with Leighanne", "Finish 30-60-90 days"], statuses: ["pending", "pending"], notes: "" },
 ];
