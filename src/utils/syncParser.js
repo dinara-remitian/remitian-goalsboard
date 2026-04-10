@@ -60,7 +60,7 @@ export function parseGoalsBotMessages(rawText) {
       const name = resolveSlackName(block);
       if (name) {
         const noteText = block.replace(/^:memo:.*?\n/, "").replace(/_Updated[\s\S]*/i,"").replace(/_Posted[\s\S]*/i,"").trim();
-        if (noteText) { const k = name.toLowerCase(); if (!pNotes[k]) pNotes[k] = { name, notes: noteText }; }
+        if (noteText) { const k = name.toLowerCase(); pNotes[k] = { name, notes: noteText }; }
       }
       continue;
     }
@@ -77,7 +77,7 @@ export function parseGoalsBotMessages(rawText) {
           for (const s of Object.keys(scMap)) if (t.indexOf(s) !== -1) { isSt = true; break; }
           if (!isSt && t.length > 1 && !t.startsWith("Posted:") && !t.startsWith("_Posted")) gl.push(t);
         }
-        if (gl.length > 0) { const k = name.toLowerCase(); if (!pGoals[k]) pGoals[k] = { name, goals: gl }; }
+        if (gl.length > 0) { const k = name.toLowerCase(); pGoals[k] = { name, goals: gl }; }
       }
       continue;
     }
@@ -104,7 +104,7 @@ export function parseGoalsBotMessages(rawText) {
         }
         const om = block.match(/Overall:\s*(\w+)/i);
         const ov = om ? (sMap[om[1].toLowerCase()] || "in_progress") : "in_progress";
-        if (gs.length > 0) { const k = name.toLowerCase(); if (!pStatuses[k]) pStatuses[k] = { name, statuses: gs, overall: ov }; }
+        if (gs.length > 0) { const k = name.toLowerCase(); pStatuses[k] = { name, statuses: gs, overall: ov }; }
       }
       continue;
     }
@@ -119,7 +119,7 @@ export function parseGoalsBotMessages(rawText) {
       const mapped = sMap[status] || (validSt.includes(status) ? status : null);
       if (!mapped) continue;
       const k = name.toLowerCase();
-      if (!pOverall[k]) pOverall[k] = { name, status: mapped };
+      pOverall[k] = { name, status: mapped };
     }
   }
   return { goals: pGoals, statuses: pStatuses, overall: pOverall, notes: pNotes };
