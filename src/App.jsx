@@ -193,18 +193,12 @@ export default function App() {
       prev.map((m) => {
         let updated = { ...m };
         let matched = false;
+        // Goals come from team.js — sync only updates statuses and notes
+        // This prevents the parser from cross-contaminating goals between people
         const gMatch = Object.values(goalsData).find((g) => matchMember(g.name, [m]) !== null);
         if (gMatch) {
-          const ng = [...gMatch.goals];
-          while (ng.length < m.goals.length) ng.push("");
-          const ns = ng.map((g, i) => {
-            if (!g) return "pending";
-            if (i < m.goals.length && m.goals[i] === g && m.statuses[i] !== "pending") return m.statuses[i];
-            return "not_started";
-          });
-          updated = { ...updated, goals: ng, statuses: ns };
           matched = true;
-          log(`📋 "${gMatch.name}" → ${m.name}: ${ng.filter(Boolean).length} goals loaded`, "success");
+          log(`📋 "${gMatch.name}" → ${m.name}: goals preserved from team.js (sync skips goal overwrite)`, "info");
         }
         const sMatch = Object.values(statusData).find((s) => matchMember(s.name, [m]) !== null);
         if (sMatch) {
