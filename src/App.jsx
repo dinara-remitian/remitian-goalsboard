@@ -396,7 +396,7 @@ export default function App() {
 
         {/* Tabs */}
         <div className="flex gap-2 mb-3 flex-wrap items-center">
-          {[["heroes", "🦸 Heroes"], ["leaderboard", "🏆 Leaderboard"], ["monthly", "📊 Monthly"]].map(([id, l]) => (
+          {[["heroes", `🦸 Week of ${getWeekLabel()}`], ["leaderboard", "🏆 Leaderboard"], ["monthly", "📊 Monthly"]].map(([id, l]) => (
             <button
               key={id}
               onClick={() => setTab(id)}
